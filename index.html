@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<nav class="navbar navbar-inverse">
+    
+</nav>
+
+<body style="background: white;">  
+
+    <h1>File Management</h1>
+    <form>
+        <div>
+            <p>Husk at skriv ".txt", ".JOSN" eller en anden format der øsnkes.</p>
+            <label>File name</label>
+            <input id="fileName" type="text">
+        </div>
+        <div>
+            <label>Text body</label>
+            <textarea id="fileBody" cols="30" rows="10"></textarea>
+        </div>
+    </form>
+    <button id="buttonCreate">Create</button>
+    <button id="buttonRead">Read</button>
+    <button id="buttonDelete">Delete</button>  
+    <!--
+        Flere knapper vil komme, når det basale virker.
+    -->
+
+    <!-- https://stackoverflow.com/questions/19059580/client-on-node-js-uncaught-referenceerror-require-is-not-defined -->
+    <script>
+        require('./index.js')
+        //--require('./index.js')
+    </script>
+    <!--
+    <script src="index.js"></script>
+    -->
+
+    <!-- mere kommer!! -->
+    <h1>API sjov</h1>
+    <script>
+      fetch('https://www.dnd5eapi.co/api')
+        .then(res => res.json())
+        .then(data => console.log(data))
+      
+    </script>
+
+
+
+</body>
+</html>
